@@ -1,4 +1,4 @@
-cho "Please enter the KMS Endpoint URL"
+echo "Please enter the KMS Endpoint URL"
 read ENDPOINT
 echo "Please enter the KMS Key OCID"
 read KEY
