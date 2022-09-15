@@ -9,3 +9,4 @@ echo "---------- Encrypted Text ----------"
 encrypted=$(oci kms crypto encrypt --key-id "$KEY" --endpoint "$ENDPOINT" --plaintext "$( echo $PLAIN_TEXT | base64 -w0 )")
 export cipher=$(echo $encrypted | jq -r '.data | .ciphertext')
 echo $cipher
+echo "------------------------------"
