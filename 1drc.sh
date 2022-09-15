@@ -5,7 +5,7 @@ read KEY
 echo "Please enter the Encrypted Text (Above)"
 read CIPHER_TEXT
 echo "Plain Text"
-decrypted=$(oci kms crypto decrypt --key-id "$KEY" --endpoint "$ENDPOINT" --cip$
+decrypted=$(oci kms crypto decrypt --key-id "$KEY" --endpoint "$ENDPOINT" --ciphertext $CIPHER_TEXT)
 echo $decrypted
 export plain=$(echo $decrypted | jq -r '.data | .plaintext')
 echo $plain | base64 --decode
