@@ -29,7 +29,7 @@ def read_secret_value(secret_client, secret_id):
     base64_secret_bytes = base64_Secret_content.encode('ascii')
     base64_message_bytes = base64.b64decode(base64_secret_bytes)
     secret_content = base64_message_bytes.decode('ascii')
-    return base64_Secret_content
+    return secret_content
 
 # Print secret
 secret_contents = read_secret_value(secret_client, secret_id)
